@@ -9,6 +9,7 @@ const Navbar = () => {
    const {openSignIn} = useClerk()
    const {user} = useUser()
 
+   
 
   return (
     
