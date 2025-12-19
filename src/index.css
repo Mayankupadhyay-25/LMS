@@ -1,2 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Miniver&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --text-home-heading-small: 28px;
+  --leading-home-heading-small: 34px;
+
+  --text-home-heading-large: 40px;
+  --leading-home-heading-large: 50px;
+
+  --text-course-details-heading-small: 26px;
+  --leading-course-details-heading-small: 36px;
+
+  --text-course-details-heading-large: 32px;
+  --leading-course-details-heading-large: 40px;
+
+  --text-default: 15px;
+  --leading-default: 21px;
+}
