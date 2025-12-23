@@ -7,14 +7,14 @@ const CoursesSection = () => {
 
   const {allCourses} = useContext(AppContext)
   return (
-    <div className='py-16 md:px:40 px-8'>
+    <div className='py-16 md:px:40 px-39'>
         <h2 className='text-3xl font-medium text-gray-800 '>learn from best </h2>
         <p className='text-sm md:text-base text-gray-500 mt-3'>Discover our top-releted courses accross various categories. from coding and design
-          to business and willness, our courses are crafted to deliver result.
+        to <br/> business and willness, our courses are crafted to deliver result.
         </p>
 
-        <div>
-          {allCourses.slice (0,4).map((course,index) => <CourseCard key={index} course={course} /> )}
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 md:px-0 md:my-16 my-10 gap-4'>
+          {allCourses?.slice(0,4).map((course,index) => <CourseCard key={index} course={course} /> )}
 
         </div>
 
