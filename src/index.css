@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* ---------- Font Sizes ---------- */
   --text-home-heading-small: 28px;
   --leading-home-heading-small: 34px;
 
@@ -11,14 +12,17 @@
   --text-course-details-heading-small: 26px;
   --leading-course-details-heading-small: 36px;
 
-  --text-course-details-heading-large: 32px;
-  --leading-course-details-heading-large: 40px;
+  --text-course-details-heading-large: 36px;
+  --leading-course-details-heading-large: 44px;
 
   --text-default: 15px;
   --leading-default: 21px;
-}
 
-@theme {
+  /* ---------- Grid ---------- */
   --grid-auto-fit: repeat(auto-fit, minmax(200px, 1fr));
-}
+  --grid-auto: repeat(auto-fit, minmax(200px, 1fr));
 
+  /* ---------- Spacing ---------- */
+  --spacing-section-height: 500px;
+  --section-height: 500px;
+}
