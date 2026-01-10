@@ -49,11 +49,8 @@ const CourseDetails = () => {
         <div className="max-w-xl z-10 text-gray-700">
           <h1 className="font-bold text-black text-3xl md:text-4xl">{courseData.courseTitle}</h1>
 
-          <p
-            className="mt-3 text-gray-600"
-            dangerouslySetInnerHTML={{ __html: courseData.courseDescription.slice(0, 200) }}
-          />
-
+          <div className="rich-text pt-4 md:text-base text-sm"
+            dangerouslySetInnerHTML={{ __html: courseData.courseDescription.slice(0, 200) }} />
           {/* Review and rating */}
           <div className="flex items-center space-x-2 pt-3 pb-1 text-sm">
             <span className="text-sm font-medium">{avgRating.toFixed(1)}</span>
@@ -104,6 +101,11 @@ const CourseDetails = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="py-20 text-sm md:text-default">
+            <h3 className="text-xl font-semibold text-gray-800">Course Description</h3>
+             <div className="rich-text pt-3"
+            dangerouslySetInnerHTML={{ __html: courseData.courseDescription }} />
           </div>
         </div>
 
