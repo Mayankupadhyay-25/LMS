@@ -18,5 +18,6 @@ const MyEnrollments = () => {
     </div>
   );
 };
+ // </code>
 
 export default MyEnrollments;
