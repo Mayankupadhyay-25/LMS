@@ -50,7 +50,7 @@ const CourseDetails = () => {
     // common patterns: youtu.be/ID or youtube.com/watch?v=ID or /embed/ID
     const m = url.match(/(?:youtu\.be\/|v=|embed\/)([0-9A-Za-z_-]{11})/);
     if (m && m[1]) return m[1];
-    const parts = url.split('/');
+    const parts = url.split("/");
     return parts.pop();
   };
 
@@ -149,7 +149,9 @@ const CourseDetails = () => {
                                 <span
                                   onClick={() =>
                                     setIsPlayerData({
-                                      videoId: extractYouTubeId(lecture.lectureUrl),
+                                      videoId: extractYouTubeId(
+                                        lecture.lectureUrl
+                                      ),
                                     })
                                   }
                                   className="text-blue-500 cursor-pointer"
@@ -187,27 +189,31 @@ const CourseDetails = () => {
         {/* Right column */}
         <div
           className="max-w-course-card z-10 shadow-custom-card rounded-t md:rounded-none overflow-hidden
-         bg-white min-w-[300px] sm:min-w-[420px]" >
+         bg-white min-w-[300px] sm:min-w-[420px]"
+        >
+          {playerData ? (
+            <YouTube
+              videoId={playerData.videoId}
+              opts={{ playerVars: { autoplay: 1 } }}
+              iframeClassName="w-full aspect-video"
+            />
+          ) : (
+            <img src={courseData.courseThumbnail} alt="" />
+          )}
 
-          { 
-              playerData ? 
-                <YouTube
-                  videoId={playerData.videoId}
-                  opts={{ playerVars: { autoplay: 1 } }}
-                  iframeClassName="w-full aspect-video"/>
-                :<img src={courseData.courseThumbnail} alt="" />
-              }
-          
           <div className="p-5">
             <div className="flex item-center gap-2">
-                <img
-                  className="w-3.5"
-                  src={assets.time_left_clock_icon}
-                  alt="time left clock icon"/>
-              
+              <img
+                className="w-3.5"
+                src={assets.time_left_clock_icon}
+                alt="time left clock icon"
+              />
 
-              <img className="w-3.5" src={assets.time_left_clock_icon}
-                alt="time left clock icon" />
+              <img
+                className="w-3.5"
+                src={assets.time_left_clock_icon}
+                alt="time left clock icon"
+              />
               <p className="text-red-500">
                 <span className="font-medium">5 Days </span>left at this price!
               </p>
