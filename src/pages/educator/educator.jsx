@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-const educator = () => {
+const Educator = () => {
   return (
     <div>
         <h1>educator</h1>
@@ -12,4 +12,4 @@ const educator = () => {
   )
 }
 
-export default educator
+export default Educator
