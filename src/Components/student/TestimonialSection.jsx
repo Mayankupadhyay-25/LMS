@@ -10,7 +10,7 @@ const TestimonialSection = () => {
         transformation, success, and how our
         <br /> platform made a difference in their lives
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 py-16 md:px-40 px-39">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 py-16 md:px-40 px-8">
         {dummyTestimonial.map((testimonial, index) => (
           <div
             key={index}

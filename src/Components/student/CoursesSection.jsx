@@ -6,7 +6,7 @@ import { AppContext } from "../../context/AppContext";
 const CoursesSection = () => {
   const { allCourses } = useContext(AppContext);
   return (
-    <div className="py-16 md:px:40 px-39">
+    <div className="py-16 md:px-40 px-8">
       <h2 className="text-3xl font-medium text-gray-800 ">learn from best </h2>
       <p className="text-sm md:text-base text-gray-500 mt-3">
         Discover our top-releted courses accross various categories. from coding
